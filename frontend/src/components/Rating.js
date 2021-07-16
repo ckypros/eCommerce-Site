@@ -1,3 +1,5 @@
+import PropTypes from 'prop-types';
+
 const Rating = ({ value, numRatings, color }) => {
     const getStar = (starNum) => {
         const star =
@@ -23,6 +25,12 @@ const Rating = ({ value, numRatings, color }) => {
 
 Rating.defaultProps = {
     color: '#f8e825',
+};
+
+Rating.propTypes = {
+    value: PropTypes.number.isRequired,
+    numRatings: PropTypes.number.isRequired,
+    color: PropTypes.string,
 };
 
 export default Rating;
