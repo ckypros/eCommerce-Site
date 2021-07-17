@@ -24,6 +24,8 @@ const Rating = ({ value, numRatings, color }) => {
 };
 
 Rating.defaultProps = {
+    value: 0,
+    numRatings: 0,
     color: '#f8e825',
 };
 
