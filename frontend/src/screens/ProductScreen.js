@@ -20,7 +20,7 @@ const ProductScreen = ({ history, match }) => {
     }, [dispatch, match]);
 
     const addToCartHandler = () => {
-        dispatch(addToCart(product._id, qty));
+        dispatch(addToCart(product._id, Number(qty)));
         history.push(`/cart/`);
     };
 
@@ -95,7 +95,7 @@ const ProductScreen = ({ history, match }) => {
                                     <Row>
                                         <Button
                                             onClick={addToCartHandler}
-                                            className='btn-block'
+                                            className='w-100'
                                             type='button'
                                             disabled={product.countInStock === 0}
                                         >
