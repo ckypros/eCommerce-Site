@@ -51,7 +51,9 @@ const ProfileScreen = ({ location, history }) => {
         <p>Use these fields to update user info.</p>
         {message && <Message variant='danger'>{message}</Message>}
         {error && <Message variant='danger'>{error}</Message>}
-        {success && <Message variant='success'>{success}</Message>}
+        {success && (
+          <Message variant='success'>Profile updated successfully.</Message>
+        )}
         {loading && <Loader />}
         <Form onSubmit={submitHandler}>
           {/* NAME */}
